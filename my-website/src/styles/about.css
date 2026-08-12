@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --sage-green: #7d9d8c;
+  --dark-sage: #637f70;
+  --dusty-blue: #6e8ca6;
+  --dark-blue: #56748e;
+  --light-blue: #dce6ec;
+  --cream: #faf8f4;
+  --warm-white: #fffdf9;
+  --soft-gray: #d8dcdd;
+  --charcoal: #333333;
+  --muted-text: #686868;
+  --warm-gold: #c8a97e;
+  --border-color: #e6e3dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-page {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--warm-white);
+}
+
+/* -------------------------------- */
+/* HERO / MEET JULIE */
+/* -------------------------------- */
+
+.about-hero {
+  min-height: 670px;
+  padding: 95px 8%;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 80px;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(125, 157, 140, 0.1),
+      transparent 28%
+    ),
+    var(--cream);
+}
+
+.about-hero-text {
+  max-width: 690px;
+}
+
+.about-label {
+  margin: 0 0 22px;
+  color: var(--warm-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  margin: 0;
+  color: var(--dusty-blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(62px, 7vw, 92px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.about-intro {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-primary-button,
+.about-light-button {
+  min-height: 50px;
+  padding: 0 27px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-primary-button {
+  background-color: var(--dusty-blue);
+  color: white;
+}
+
+.about-primary-button:hover {
+  background-color: var(--dark-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(86, 116, 142, 0.2);
+}
+
+/* Image */
+
+.about-image-area {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  justify-self: center;
+}
+
+.about-image-background {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-blue);
+  border-radius: 48% 48% 10px 10px;
+  z-index: 1;
+}
+
+.about-image {
+  width: 100%;
+  height: 560px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+  border-radius: 48% 48% 8px 8px;
+  box-shadow: 0 18px 40px rgba(51, 51, 51, 0.11);
+}
+
+.about-image-card {
+  width: 290px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: absolute;
+  left: -28px;
+  bottom: 28px;
+  z-index: 3;
+  background-color: white;
+  box-shadow: 0 12px 28px rgba(51, 51, 51, 0.12);
+}
+
+.about-image-card span {
+  color: var(--warm-gold);
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.about-image-card p {
+  margin: 0;
+  color: var(--charcoal);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* -------------------------------- */
+/* MEET JULIE STORY */
+/* -------------------------------- */
+
+.about-story {
+  padding: 110px 8%;
+  display: grid;
+  grid-template-columns: 0.78fr 1.1fr;
+  gap: 100px;
+  background-color: var(--warm-white);
+}
+
+.story-heading {
+  max-width: 520px;
+}
+
+.story-heading h2,
+.values-heading h2,
+.therapy-details-heading h2,
+.approach-list-heading h2,
+.about-callout h2 {
+  margin: 0;
+  color: var(--dusty-blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.story-content {
+  max-width: 760px;
+}
+
+.story-content p {
+  margin: 0 0 23px;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.story-highlight {
+  margin-top: 34px !important;
+  padding: 8px 0 8px 22px;
+  border-left: 3px solid var(--warm-gold);
+  color: var(--dusty-blue) !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px !important;
+  font-weight: 500;
+  line-height: 1.5 !important;
+}
+
+/* -------------------------------- */
+/* WHAT THERAPY LOOKS LIKE */
+/* -------------------------------- */
+
+.about-values {
+  padding: 105px 8%;
+  background-color: #f1f4f3;
+}
+
+.values-heading {
+  max-width: 830px;
+  margin-bottom: 55px;
+}
+
+.approach-intro {
+  max-width: 760px;
+  margin: 26px 0 0;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  min-height: 315px;
+  padding: 40px 32px;
+  background-color: var(--warm-white);
+  border: 1px solid transparent;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--soft-gray);
+  box-shadow: 0 18px 40px rgba(51, 51, 51, 0.08);
+}
+
+.value-number {
+  margin-bottom: 28px;
+  color: var(--sage-green);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.value-card h3 {
+  margin: 0 0 15px;
+  color: var(--dusty-blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.value-card p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* -------------------------------- */
+/* PERSONALIZED CARE */
+/* -------------------------------- */
+
+.therapy-details {
+  padding: 110px 8%;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 100px;
+  background-color: var(--warm-white);
+}
+
+.therapy-details-heading {
+  max-width: 530px;
+}
+
+.therapy-details-content {
+  max-width: 760px;
+}
+
+.therapy-details-content p {
+  margin: 0 0 24px;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.therapy-details-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------------------- */
+/* HOW THERAPY CAN HELP */
+/* -------------------------------- */
+
+.approach-list-section {
+  padding: 105px 8%;
+  background-color: var(--cream);
+}
+
+.approach-list-heading {
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+.approach-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+  max-width: 1100px;
+}
+
+.approach-item {
+  min-height: 90px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: var(--warm-white);
+  border: 1px solid var(--border-color);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.approach-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(51, 51, 51, 0.07);
+}
+
+.approach-item span {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  color: var(--dusty-blue);
+  font-size: 16px;
+}
+
+.approach-item p {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* -------------------------------- */
+/* FINAL CTA */
+/* -------------------------------- */
+
+.about-callout {
+  padding: 105px 8%;
+  background-color: var(--dusty-blue);
+  text-align: center;
+}
+
+.callout-content {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.about-label-light {
+  color: #ead9bb;
+}
+
+.about-callout h2 {
+  color: white;
+}
+
+.about-callout p:not(.about-label) {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-light-button {
+  background-color: var(--warm-white);
+  color: var(--dusty-blue);
+}
+
+.about-light-button:hover {
+  background-color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(32, 52, 68, 0.18);
+}
+
+/* -------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------- */
+
+@media (max-width: 1050px) {
+  .about-hero {
+    gap: 55px;
+    padding-inline: 6%;
+  }
+
+  .about-story,
+  .therapy-details {
+    gap: 65px;
+  }
+
+  .values-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 950px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 65px;
+    text-align: center;
+  }
+
+  .about-hero-text {
+    margin: 0 auto;
+  }
+
+  .about-image-area {
+    max-width: 520px;
+  }
+
+  .about-story,
+  .therapy-details {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .story-heading,
+  .therapy-details-heading {
+    max-width: 700px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    min-height: auto;
+    padding: 70px 24px 80px;
+  }
+
+  .about-hero h1 {
+    font-size: 62px;
+  }
+
+  .about-intro {
+    font-size: 15px;
+  }
+
+  .about-image {
+    height: 440px;
+  }
+
+  .about-image-background {
+    top: -12px;
+    right: -12px;
+  }
+
+  .about-image-card {
+    width: calc(100% - 30px);
+    left: 15px;
+    bottom: 18px;
+  }
+
+  .about-story,
+  .about-values,
+  .therapy-details,
+  .approach-list-section,
+  .about-callout {
+    padding: 75px 24px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    min-height: auto;
+  }
+
+  .approach-list {
+    grid-template-columns: 1fr;
+  }
+
+  .story-highlight {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 54px;
+  }
+
+  .about-primary-button,
+  .about-light-button {
+    width: 100%;
+  }
+
+  .about-image {
+    height: 400px;
+  }
+
+  .story-heading h2,
+  .values-heading h2,
+  .therapy-details-heading h2,
+  .approach-list-heading h2,
+  .about-callout h2 {
+    font-size: 40px;
+  }
+
+  .value-card {
+    padding: 32px 25px;
+  }
+
+  .approach-item {
+    padding: 20px;
+  }
+}

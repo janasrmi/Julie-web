@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import chair from "../assets/chair.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   const bookingLink =
@@ -22,17 +23,17 @@ function Home() {
             Home
           </a>
 
-          <a className="nav-link" href="#about">
+          <Link className="nav-link" to="/about">
             About
-          </a>
+          </Link>
 
           <a className="nav-link" href="#services">
             Services
           </a>
 
-          <a className="nav-link" href="#contact">
+          <Link className="nav-link" to="/contact">
             Contact
-          </a>
+          </Link>
         </div>
 
         <a className="book-button" href={bookingLink}>
