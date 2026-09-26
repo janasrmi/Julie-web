@@ -1,5 +1,6 @@
 import "../styles/home.css";
-import "../styles/contact.css";
+import "../styles/Contact.css";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 function Contact() {
@@ -9,36 +10,7 @@ function Contact() {
   return (
     <div className="contact-page">
       <nav className="navbar">
-        <Link className="logo" to="/">
-          <div className="logo-icon">🌿</div>
-
-          <div className="logo-text">
-            <h2>Serene Corner</h2>
-            <p>Counseling</p>
-          </div>
-        </Link>
-
-        <div className="nav-menu">
-          <Link className="nav-link" to="/">
-            Home
-          </Link>
-
-          <Link className="nav-link" to="/about">
-            About
-          </Link>
-
-          <Link className="nav-link" to="/#services">
-            Services
-          </Link>
-
-          <Link className="nav-link active" to="/contact">
-            Contact
-          </Link>
-        </div>
-
-        <a className="book-button" href={bookingLink}>
-          Book a Session
-        </a>
+        <Navbar />
       </nav>
 
       <main className="contact-main">
@@ -92,7 +64,7 @@ function Contact() {
                     <div className="form-group">
                     <label htmlFor="email">Email</label>
 
-                    <input
+                    <input7
                         id="email"
                         type="email"
                         name="email"

@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import chair from "../assets/chair.png";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -9,36 +10,7 @@ function Home() {
   return (
     <div className="home-page">
       <nav className="navbar">
-        <div className="logo">
-          <div className="logo-icon">🌿</div>
-
-          <div className="logo-text">
-            <h2>Serene Corner</h2>
-            <p>Counseling</p>
-          </div>
-        </div>
-
-        <div className="nav-menu">
-          <a className="nav-link active" href="#home">
-            Home
-          </a>
-
-          <Link className="nav-link" to="/about">
-            About
-          </Link>
-
-          <a className="nav-link" href="#services">
-            Services
-          </a>
-
-          <Link className="nav-link" to="/contact">
-            Contact
-          </Link>
-        </div>
-
-        <a className="book-button" href={bookingLink}>
-          Book a Session
-        </a>
+        <Navbar />
       </nav>
 
       <main>
@@ -153,15 +125,6 @@ function Home() {
               <h3>Women’s Issues</h3>
               <p>
                Explore self-worth, relationships, life transitions, and the unique challenges women face throughout life.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">✧</div>
-              <h3>Burnout & Overwhelm</h3>
-              <p>
-                Identify sources of stress, establish healthier boundaries, and restore balance in your daily life.
-
               </p>
             </article>
              <article className="service-card">

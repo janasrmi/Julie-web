@@ -1,7 +1,9 @@
-import "../styles/home.css";
+
 import "../styles/about.css";
+import Navbar from "../components/Navbar";
 import julie from "../assets/julie.png";
 import { Link } from "react-router-dom";
+
 
 function About() {
   const bookingLink =
@@ -10,38 +12,8 @@ function About() {
   return (
     <div className="about-page">
 
-      {/* NAVBAR */}
       <nav className="navbar">
-        <Link className="logo" to="/">
-          <div className="logo-icon">🌿</div>
-
-          <div className="logo-text">
-            <h2>Serene Corner</h2>
-            <p>Counseling</p>
-          </div>
-        </Link>
-
-        <div className="nav-menu">
-          <Link className="nav-link" to="/">
-            Home
-          </Link>
-
-          <Link className="nav-link active" to="/about">
-            About
-          </Link>
-
-          <Link className="nav-link" to="/#services">
-            Services
-          </Link>
-
-          <Link className="nav-link" to="/contact">
-            Contact
-          </Link>
-        </div>
-
-        <a className="book-button" href={bookingLink}>
-          Book a Session
-        </a>
+        <Navbar />
       </nav>
 
       <main>
