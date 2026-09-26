@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 function Navbar() {
   const bookingLink =
-    "https://serenecorner.clientsecure.me/request/service";
+    "https://secure.helloalma.com/providers/julie-attalla/";
 
   return (
     <nav className="navbar">

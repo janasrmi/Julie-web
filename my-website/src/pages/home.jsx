@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const bookingLink =
-    "https://serenecorner.clientsecure.me/request/service";
+    "https://secure.helloalma.com/providers/julie-attalla/";
 
   return (
     <div className="home-page">
