@@ -638,3 +638,147 @@ a {
     min-height: auto;
   }
 }
+
+/* =========================
+   INSURANCE & PAYMENT
+   ========================= */
+
+.insurance-section {
+  width: 100%;
+  padding: 30px 5% 50px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.insurance-section h2 {
+  margin: 0 0 22px;
+
+  color: var(--dusty-blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.insurance-section p {
+  max-width: 1250px;
+  margin: 0 auto 14px;
+
+  color: var(--charcoal);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.insurance-logos {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 75px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.insurance-logos img {
+  width: 210px;
+  height: 105px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* Make wider logos slightly larger */
+.insurance-logos img:nth-child(1) {
+  width: 220px;
+}
+
+.insurance-logos img:nth-child(2) {
+  width: 230px;
+}
+
+.insurance-logos img:nth-child(3) {
+  width: 240px;
+}
+
+.insurance-logos img:nth-child(4) {
+  width: 220px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .insurance-section {
+    padding: 65px 6%;
+  }
+
+  .insurance-section h2 {
+    font-size: 42px;
+  }
+
+  .insurance-logos {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
+  }
+
+  .insurance-logos img,
+  .insurance-logos img:nth-child(1),
+  .insurance-logos img:nth-child(2),
+  .insurance-logos img:nth-child(3),
+  .insurance-logos img:nth-child(4) {
+    width: 200px;
+    height: 90px;
+    margin: auto;
+  }
+}
+
+
+/* PHONE */
+
+@media (max-width: 550px) {
+  .insurance-section {
+    padding: 55px 24px;
+  }
+
+  .insurance-section h2 {
+    font-size: 38px;
+  }
+
+  .insurance-section p {
+    font-size: 16px;
+  }
+
+  .insurance-logos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .insurance-logos img,
+  .insurance-logos img:nth-child(1),
+  .insurance-logos img:nth-child(2),
+  .insurance-logos img:nth-child(3),
+  .insurance-logos img:nth-child(4) {
+    width: 210px;
+    height: 85px;
+  }
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

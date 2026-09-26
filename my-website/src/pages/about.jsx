@@ -1,9 +1,8 @@
-
 import "../styles/about.css";
 import Navbar from "../components/Navbar";
+import logo from "../assets/logo.png";
 import julie from "../assets/julie.png";
 import { Link } from "react-router-dom";
-
 
 function About() {
   const bookingLink =
@@ -12,21 +11,22 @@ function About() {
   return (
     <div className="about-page">
 
-      <nav className="navbar">
-        <Navbar />
-      </nav>
+      <Navbar />
 
       <main>
 
         {/* MEET JULIE */}
         <section className="about-hero">
+
           <div className="about-hero-text">
 
             <p className="about-label">ABOUT YOUR THERAPIST</p>
 
             <h1>Meet Julie</h1>
 
-            <div className="about-full-text">
+            {/* FIRST TWO PARAGRAPHS */}
+            <div className="about-preview-text">
+
               <p>
                 You may be used to carrying everything on your own—managing
                 stress, meeting expectations, and showing up for others while
@@ -43,36 +43,18 @@ function About() {
                 understood, and empowered to create meaningful change.
               </p>
 
-              <p>
-                I work with adults experiencing anxiety, stress, burnout,
-                trauma, self-esteem concerns, relationship challenges, life
-                transitions, women’s issues, and faith-related concerns. My
-                approach is collaborative and tailored to your unique needs,
-                integrating evidence-based therapies including Cognitive
-                Behavioral Therapy (CBT), Acceptance and Commitment Therapy
-                (ACT), Dialectical Behavior Therapy (DBT) skills, and
-                Emotionally Focused Therapy (EFT) principles.
-              </p>
-
-              <p>
-                Together, we’ll build practical coping skills, strengthen
-                emotional resilience, improve relationships, and help you move
-                toward a more balanced, fulfilling life. For those who desire
-                it, I also offer Christian counseling that thoughtfully
-                integrates faith with evidence-based therapy while honoring
-                your personal beliefs and values.
-              </p>
-
-              <p>
-                Seeking support is a courageous first step, and I would be
-                honored to walk alongside you on your journey toward healing
-                and growth.
-              </p>
             </div>
+
+            <a href="#julie-full-bio" className="learn-more-button">
+              Learn More ↓
+            </a>
+
           </div>
+
 
           {/* JULIE IMAGE */}
           <div className="about-image-area">
+
             <div className="about-image-background"></div>
 
             <img
@@ -80,12 +62,85 @@ function About() {
               src={julie}
               alt="Julie from Serene Corner Counseling"
             />
+
           </div>
+
         </section>
+
+
+        {/* FULL ABOUT JULIE SECTION */}
+        <section
+          className="julie-full-bio"
+          id="julie-full-bio"
+        >
+
+          <div className="julie-bio-heading">
+
+            <p className="about-label">
+              MORE ABOUT JULIE
+            </p>
+
+            <h2>
+              A supportive space for healing and growth.
+            </h2>
+
+          </div>
+
+
+          <div className="julie-bio-content">
+
+            <p>
+              You may be used to carrying everything on your own—managing
+              stress, meeting expectations, and showing up for others while
+              quietly struggling yourself. Over time, that weight can leave
+              you feeling overwhelmed, anxious, stuck, or disconnected. You
+              don’t have to navigate it alone.
+            </p>
+
+            <p>
+              As a first-generation American, I understand how culture,
+              family dynamics, personal values, and life transitions can
+              shape the way we experience life’s challenges. My goal is to
+              provide a warm, supportive space where you feel heard,
+              understood, and empowered to create meaningful change.
+            </p>
+
+            <p>
+              I work with adults experiencing anxiety, stress, burnout,
+              trauma, self-esteem concerns, relationship challenges, life
+              transitions, women’s issues, and faith-related concerns. My
+              approach is collaborative and tailored to your unique needs,
+              integrating evidence-based therapies including Cognitive
+              Behavioral Therapy (CBT), Acceptance and Commitment Therapy
+              (ACT), Dialectical Behavior Therapy (DBT) skills, and
+              Emotionally Focused Therapy (EFT) principles.
+            </p>
+
+            <p>
+              Together, we’ll build practical coping skills, strengthen
+              emotional resilience, improve relationships, and help you move
+              toward a more balanced, fulfilling life. For those who desire
+              it, I also offer Christian counseling that thoughtfully
+              integrates faith with evidence-based therapy while honoring
+              your personal beliefs and values.
+            </p>
+
+            <p>
+              Seeking support is a courageous first step, and I would be
+              honored to walk alongside you on your journey toward healing
+              and growth.
+            </p>
+
+          </div>
+
+        </section>
+
 
         {/* MY APPROACH */}
         <section className="about-values">
+
           <div className="values-heading">
+
             <p className="about-label">MY APPROACH</p>
 
             <h2>What Therapy Looks Like</h2>
@@ -95,11 +150,14 @@ function About() {
               understand yourself, strengthen your coping skills, and move
               toward the life you want to live.
             </p>
+
           </div>
+
 
           <div className="values-grid">
 
             <article className="value-card">
+
               <div className="value-number">01</div>
 
               <h3>Identify What’s Keeping You Stuck</h3>
@@ -108,9 +166,12 @@ function About() {
                 We explore the patterns, thoughts, emotions, and experiences
                 that may be making it difficult to move forward.
               </p>
+
             </article>
 
+
             <article className="value-card">
+
               <div className="value-number">02</div>
 
               <h3>Develop Practical Coping Skills</h3>
@@ -119,9 +180,12 @@ function About() {
                 We build tools you can use in everyday life to manage stress,
                 regulate emotions, and respond to challenges more effectively.
               </p>
+
             </article>
 
+
             <article className="value-card">
+
               <div className="value-number">03</div>
 
               <h3>Create Lasting Change</h3>
@@ -130,21 +194,32 @@ function About() {
                 We work toward meaningful changes that align with your values,
                 goals, relationships, and the life you want to create.
               </p>
+
             </article>
 
           </div>
+
         </section>
+
 
         {/* PERSONALIZED CARE */}
         <section className="therapy-details">
 
           <div className="therapy-details-heading">
-            <p className="about-label">PERSONALIZED CARE</p>
 
-            <h2>Therapy is not one-size-fits-all.</h2>
+            <p className="about-label">
+              PERSONALIZED CARE
+            </p>
+
+            <h2>
+              Therapy is not one-size-fits-all.
+            </h2>
+
           </div>
 
+
           <div className="therapy-details-content">
+
             <p>
               I believe the most effective counseling experience is one that
               is tailored to your unique needs, goals, and life experiences.
@@ -159,24 +234,35 @@ function About() {
               and women’s issues through evidence-based therapy that is both
               practical and compassionate.
             </p>
+
           </div>
 
         </section>
+
 
         {/* HOW THERAPY CAN HELP */}
         <section className="approach-list-section">
 
           <div className="approach-list-heading">
-            <p className="about-label">HOW THERAPY CAN HELP</p>
 
-            <h2>My approach can help you:</h2>
+            <p className="about-label">
+              HOW THERAPY CAN HELP
+            </p>
+
+            <h2>
+              My approach can help you:
+            </h2>
+
           </div>
+
 
           <div className="approach-list">
 
             <div className="approach-item">
               <span>✦</span>
-              <p>Manage anxiety, stress, and overwhelming thoughts</p>
+              <p>
+                Manage anxiety, stress, and overwhelming thoughts
+              </p>
             </div>
 
             <div className="approach-item">
@@ -188,7 +274,9 @@ function About() {
 
             <div className="approach-item">
               <span>✦</span>
-              <p>Improve self-esteem and self-confidence</p>
+              <p>
+                Improve self-esteem and self-confidence
+              </p>
             </div>
 
             <div className="approach-item">
@@ -200,7 +288,9 @@ function About() {
 
             <div className="approach-item">
               <span>✦</span>
-              <p>Heal from difficult past experiences</p>
+              <p>
+                Heal from difficult past experiences
+              </p>
             </div>
 
             <div className="approach-item">
@@ -211,7 +301,9 @@ function About() {
             </div>
 
           </div>
+
         </section>
+
 
         {/* BOOKING SECTION */}
         <section className="about-callout">
@@ -222,7 +314,9 @@ function About() {
               READY TO TAKE THE NEXT STEP?
             </p>
 
-            <h2>You don’t have to navigate it alone.</h2>
+            <h2>
+              You don’t have to navigate it alone.
+            </h2>
 
             <p>
               Schedule a consultation to learn more about therapy and see
@@ -230,25 +324,33 @@ function About() {
               you.
             </p>
 
-            <a className="about-light-button" href={bookingLink}>
+            <a
+              className="about-light-button"
+              href={bookingLink}
+            >
               Book a Session
             </a>
 
           </div>
+
         </section>
 
       </main>
+
 
       {/* FOOTER */}
       <footer className="footer">
 
         <div className="footer-brand">
-          <div className="logo-icon">🌿</div>
 
-          <div>
-            <h3>Serene Corner</h3>
-            <p>Counseling</p>
-          </div>
+          <Link className="logo" to="/">
+            <img
+              src={logo}
+              alt="Serene Corner Counseling"
+              className="footer-logo"
+            />
+          </Link>
+
         </div>
 
         <p>

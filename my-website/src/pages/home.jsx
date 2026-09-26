@@ -1,6 +1,11 @@
 import "../styles/home.css";
+import logo from "../assets/logo.png";
 import chair from "../assets/chair.png";
 import Navbar from "../components/Navbar";
+import aetna from "../assets/aetna.png";
+import bluecross from "../assets/bluecross.png";
+import cigna from "../assets/cigna.png";
+import united from "../assets/united.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -19,7 +24,7 @@ function Home() {
             <p className="eyebrow">INDIVIDUAL THERAPY FOR ADULTS</p>
 
             <h1>
-              Find peace, and imprace growth
+              Find Peace, Embrace Growth
 
             </h1>
 
@@ -138,6 +143,29 @@ function Home() {
           </div>
         </section>
 
+        <section className="insurance-section">
+          <h2>Insurance & Payment Options</h2>
+
+          <p>
+            Serene Corner Counseling accepts major insurance plans including
+            UnitedHealthcare, Aetna, Cigna, and Blue Cross Blue Shield. If your
+            insurance plan is out-of-network, we provide superbills to assist with
+            reimbursement.
+          </p>
+
+          <p>
+            We are happy to discuss the cost of therapy during your consultation and
+            help you understand your coverage options before beginning treatment.
+          </p>
+
+          <div className="insurance-logos">
+            <img src={aetna} alt="Aetna" />
+            <img src={cigna} alt="Cigna" />
+            <img src={bluecross} alt="Blue Cross Blue Shield" />
+            <img src={united} alt="UnitedHealthcare" />
+          </div>
+        </section>
+
         <section className="contact-section" id="contact">
           <div className="contact-content">
             <p className="section-label light">READY TO BEGIN?</p>
@@ -156,22 +184,23 @@ function Home() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-brand">
-          <div className="logo-icon">🌿</div>
+     <footer className="footer">
+      <div className="footer-brand">
+        <Link className="logo" to="/">
+          <img
+            src={logo}
+            alt="Serene Corner Counseling"
+            className="footer-logo"
+          />
+        </Link>
+      </div>
 
-          <div>
-            <h3>Serene Corner</h3>
-            <p>Counseling</p>
-          </div>
-        </div>
+      <p>Compassionate support for a calmer, more confident life.</p>
 
-        <p>Compassionate support for a calmer, more confident life.</p>
-
-        <p className="copyright">
-          © {new Date().getFullYear()} Serene Corner Counseling
-        </p>
-      </footer>
+      <p className="copyright">
+        © {new Date().getFullYear()} Serene Corner Counseling
+      </p>
+    </footer>
     </div>
   );
 }
